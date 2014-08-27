@@ -1,0 +1,243 @@
+@import 'syntax-variables';
+@import 'colors';
+
+.editor-colors {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+}
+
+.editor {
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+
+    .cursor-line {
+      background-color: @syntax-gutter-background-color-selected;
+    }
+  }
+
+  .line-number.cursor-line-no-selection {
+    background-color: @syntax-gutter-background-color-selected;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    border-color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+
+  .search-results .marker .region {
+    background-color: transparent;
+    border: 1px solid @syntax-result-marker-color;
+  }
+
+  .search-results .marker.current-result .region {
+    border: 1px solid @syntax-result-marker-color-selected;
+  }
+
+  .gfm {
+    .markup {
+      &.heading {
+        color: #A6E22E;
+        font-weight: bold;
+      }
+
+      &.underline {
+        color: #E6DB74;
+        text-decoration: underline;
+      }
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .raw {
+      color: #66D9EF;
+    }
+
+    .variable.list {
+      color: #F92672;
+      font-weight: bold;
+    }
+
+    .link {
+      color: #CCC;
+
+      .entity {
+        color: #AE81FF;
+      }
+    }
+  }
+}
+
+.comment {
+  color: #75715E;
+}
+
+.string {
+  color: #E6DB74;
+}
+
+.constant.numeric {
+  color: #AE81FF;
+}
+
+.constant.language {
+  color: #AE81FF;
+}
+
+.constant.character,
+.constant.other {
+  color: #AE81FF;
+}
+
+.keyword {
+  color: #F92672;
+}
+
+.storage {
+  color: #F92672;
+}
+
+.storage.type {
+  font-style: italic;
+  color: #66D9EF;
+}
+
+.entity.name.class {
+  text-decoration: underline;
+  color: #A6E22E;
+}
+
+.entity.other.inherited-class {
+  font-style: italic;
+  text-decoration: underline;
+  color: #A6E22E;
+}
+
+.entity.name.function {
+  color: #A6E22E;
+}
+
+.entity.name.instance {
+  color: #66D9EF;
+}
+
+.variable.parameter {
+  font-style: italic;
+  color: #FD971F;
+}
+
+.entity.name.tag {
+  color: #F92672;
+}
+
+.entity.other.attribute-name {
+  color: #A6E22E;
+}
+
+.support.function {
+  color: #66D9EF;
+}
+
+.support.constant {
+  color: #66D9EF;
+}
+
+.support.type,
+.support.class {
+  font-style: italic;
+  color: #66D9EF;
+}
+
+.invalid {
+  color: #F8F8F0;
+  background-color: #F92672;
+}
+
+.invalid.deprecated {
+  color: #F8F8F0;
+  background-color: #AE81FF;
+}
+
+// Jade syntax
+.class.jade {
+  color: #AE81FF;
+}
+
+
+
+//
+// .comment { font-style: italic; color: #848484; font-size:.98em; }
+// .php .comment .phpdoc { font-weight: bold; color: #848484; background-color:white; font-weight:normal;}
+// .php .string, .php .string .keyword { color: #0000ff; font-weight: normal; }
+// .php.source.sql.embedded { color: #0000ff; }
+//
+// .php.constant.numeric { color: #c23838; }
+// .php.constant.language { color: #c37637; font-style:italic; } // null, true, false
+// .php.constant.other { color: #5d0000; }
+// .php.constant.character.escape { color: #606aa1;} // \n\r
+//
+// .php.variable, .php.variable.other { color:#268377; font-weight:normal;  }
+// .php.variable.other.property { font-weight:normal; color:black; }
+
+.php.punctuation.section.embedded.begin,
+.php.punctuation.section.embedded.end { color: @purple; font-weight: bold; }
+
+// .php.entity.name.type.class {color: #3a3a3a; text-decoration: none; } // class name declaration
+// .php.entity.name.function { color: #343434; } // function name
+// .php.entity.other.inherited-class { color:black; text-decoration: none; }
+// //
+// .php.support.class { color:#000000; } // your own classes in use
+// .php.support.other.namespace { color: black; } // your own namespaces
+//
+// .php.storage { color: @dark-purple; font-weight: bold; } // common keywords
+// .php.storage.type {}
+// .php.storage.type.function {} // function declaration
+// .php.storage.type.class {} // class declaration
+// .php.storage.modifier {}
+// .php.storage.modifier.extends {} // extends
+// //
+// .php.support.function { color: #070060; }
+// .php.support.function.url {} // url functions
+// .php.support.function.curl {} // curl functions
+// .php.support.function.basic_functions {} // define
+// .php.support.function.var {} // is_numeric
+// .php.support.function.construct { color: @dark-purple; font-weight: bold; } // echo
+// .php.meta.array .support.function.construct { color: #2b0087; font-weight: bold; }
+// .php.support.constant.ext { color: #5e0c0c; font-weight:normal; } // CURLOPT_POSTFIELDS, etc
+// .php.support.other.namespace.use { color: black; } // use Classname
+// .php.support.class.builtin { color: #742a86; } // use mysqli
+//
+.php.meta.function-call { color:@green; } // your own functions
+// .php.meta.function-call.static {} // your own functions called using static
+//
+.php.keyword { color: @cyan; font-weight: bold; }
+.php.keyword.operator { color:@pink; font-weight:normal; }
+//.php.keyword.operator.error-control { color: #7d7a7a; font-size:.9em; font-style:italics; } // the @
+.php.keyword.control { color: @cyan; font-weight: bold; } // return, exit, break, case, if, for
+.php.keyword.other.namespace {}
+.php.keyword.other.new {}
+.php.keyword.operator.class {} // Class::static

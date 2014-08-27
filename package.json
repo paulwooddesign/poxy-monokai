@@ -1,0 +1,11 @@
+{
+  "name": "poxy-monokai",
+  "theme": "syntax",
+  "version": "0.0.1",
+  "description": "Atom Monokai Theme extended to work with php",
+  "repository": "https://github.com/paulwooddesign/poxy-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}
